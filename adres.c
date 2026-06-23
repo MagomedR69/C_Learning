@@ -1,23 +1,19 @@
 #include <stdio.h>
 
-int foo()
+void foo()
 {
     float a = 4.0;
     float *pa = &a;
     printf("%p %f\n\n", (void *)pa, *pa);
-
-    return 0;
 }
 
-int bar()
+void bar()
 {
     float d = 2.44;
     float *pd = &d;
     printf("|вывод функции bar()|:\n");
 
     printf("%p %f\n", (void *)pd, *pd);
-
-    return 0;
 }
 
 int main()
