@@ -15,9 +15,9 @@ int main()
     printf("%f\n", gg[3]);
 
     char word[] = "hello bro";
-    word[3] = 'd';
+    char word[3] = 'd';
 
-    printf("%s\n", word);
+    printf("%ls\n", word);
     printf("%c\n", word[3]);
 
     int arrs[4][3] = {

@@ -1,26 +1,25 @@
 #include <stdio.h>
 
-// начало функции foo()
 int foo()
 {
     float a = 4.0;
-    float *h = &a;
-    printf("%p %f\n\n", (void *)h, *h);
+    float *pa = &a;
+    printf("%p %f\n\n", (void *)pa, *pa);
 
     return 0;
 }
-// начало функции bar()
+
 int bar()
 {
     float d = 2.44;
-    float *p = &d;
+    float *pd = &d;
     printf("|вывод функции bar()|:\n");
 
-    printf("%p %f\n", (void *)p, *p);
+    printf("%p %f\n", (void *)pd, *pd);
 
     return 0;
 }
-// начало функции main()
+
 int main()
 {
     int a = 25;
@@ -28,17 +27,17 @@ int main()
     int c = 40;
     int d = 50;
 
-    int *g = &c;
-    int *r = &b;
-    int *t = &a;
-    int *y = &d;
+    int *pc = &c;
+    int *pb = &b;
+    int *pa = &a;
+    int *pd = &d;
 
     printf("|вывод функции main()|:\n");
 
-    printf("%p %d\n", (void *)t, *t);
-    printf("%p %d\n", (void *)r, *r);
-    printf("%p %d\n", (void *)g, *g);
-    printf("%p %d\n\n", (void *)y, *y);
+    printf("%p %d\n", (void *)pa, *pa);
+    printf("%p %d\n", (void *)pb, *pb);
+    printf("%p %d\n", (void *)pd, *pd);
+    printf("%p %d\n\n", (void *)pc, *pc);
     printf("|вывод функции foo()|:\n");
 
     foo();
@@ -46,5 +45,3 @@ int main()
 
     return 0;
 }
-
-// работа с адресами и их типами :/
