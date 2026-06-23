@@ -17,9 +17,15 @@ int main()
         printf("Вы несовершеннолетний!\n");
     }
 
-    else if (age >= 60)
+    else if (age >= 60 && age < 130)
     {
         printf("Вы пенсионер!\n");
     }
+
+    else if (age > 130)
+    {
+        printf("введите корректный возраст!\n");
+    }
+
     return 0;
 }
