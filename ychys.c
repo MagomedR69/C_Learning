@@ -1,11 +1,19 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 int main()
 {
     int age;
 
-    printf("укажите ваш возраст: ");
+    printf("Укажите ваш возраст: ");
     scanf("%d", &age);
+
+    while (age < 0)
+    {
+        printf("Возраст не может быть отрицательным!\n");
+        printf("Укажите ваш возраст: ");
+        scanf("%d", &age);
+    }
 
     if (age >= 18 && age < 60)
     {
