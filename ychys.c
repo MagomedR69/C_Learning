@@ -8,7 +8,7 @@ int main()
     printf("Укажите ваш возраст: ");
     scanf("%d", &age);
 
-    while (age < 0)
+    while (age < 0 || age > 130)
     {
         printf("Возраст не может быть отрицательным!\n");
         printf("Укажите ваш возраст: ");
@@ -28,11 +28,6 @@ int main()
     else if (age >= 60 && age < 130)
     {
         printf("Вы пенсионер!\n");
-    }
-
-    else if (age > 130)
-    {
-        printf("введите корректный возраст!\n");
     }
 
     return 0;
