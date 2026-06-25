@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 
 int main()
 {
@@ -10,7 +9,7 @@ int main()
 
     while (age < 0 || age > 130)
     {
-        printf("Возраст не может быть отрицательным!\n");
+        printf("Введите корректный возраст!\n");
         printf("Укажите ваш возраст: ");
         scanf("%d", &age);
     }
