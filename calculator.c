@@ -4,41 +4,49 @@ int main()
 {
     double a, b;
     char op;
-
-    printf("введите выражение: ");
-    scanf("%lf %c %lf", &a, &op, &b);
-
-    switch (op)
+    printf("КАЛЬКУЛЯТОР\n");
+    printf("для выхода нажмите Ctrl+c\n");
+    while (1)
     {
-    case '+':
-        printf("ответ:  %.2f\n", a + b);
-        break;
+        printf("введите выражение: ");
+        int result = scanf("%lf %c %lf", &a, &op, &b);
 
-    case '-':
-        printf("ответ:  %.2f\n", a - b);
-        break;
-
-    case '*':
-        printf("ответ:  %.2f\n", a * b);
-        break;
-
-    case '/':
-        if (b == 0)
+        if (result != 3)
         {
-            printf("на ноль делить нельзя!\n");
+            printf("Неверный ввод!\n");
             break;
         }
 
-        else
+        switch (op)
         {
-            printf("ответ:  %.2f\n", a / b);
+        case '+':
+            printf("ответ:  %.2f\n", a + b);
+            break;
+
+        case '-':
+            printf("ответ:  %.2f\n", a - b);
+            break;
+
+        case '*':
+            printf("ответ:  %.2f\n", a * b);
+            break;
+
+        case '/':
+            if (b == 0)
+            {
+                printf("на ноль делить нельзя!\n");
+                break;
+            }
+
+            else
+            {
+                printf("ответ:  %.2f\n", a / b);
+            }
+            break;
+
+        default:
+            printf("неизвестная операция!\n");
+            break;
         }
-        break;
-
-    default:
-        printf("неизвестная операция!\n");
-        break;
     }
-
-    return 0;
 }
