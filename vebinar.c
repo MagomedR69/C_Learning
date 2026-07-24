@@ -1,10 +1,13 @@
 #include <stdio.h>
+
 int main()
 {
-    int a = 5;
+    int x;
 
-    printf("hello world\n");
-    printf("%d\n", a);
+    printf("Введите число: ");
+    scanf("%d", &x);
+
+    printf("Вы ввели %d\n", x);
 
     return 0;
 }
