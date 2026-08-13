@@ -14,7 +14,7 @@ void cycle(const int *nums, size_t size, int target)
             }
         }
     }
-    if (!found)
+    if (found == false)
     {
         printf("таких пар не нашли!\n");
     }

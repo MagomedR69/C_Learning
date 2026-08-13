@@ -5,7 +5,7 @@
 int main()
 {
     int target;
-    printf("введите искомое число: \n");
+    printf("введите искомое число: ");
 
     if (scanf("%d", &target) != 1)
     {
@@ -13,7 +13,7 @@ int main()
         return 1;
     }
 
-    size_t size = 5;
+    size_t size = 10;
     int *nums = malloc(size * sizeof(int));
 
     if (nums == NULL)
@@ -21,11 +21,11 @@ int main()
         printf("память не была выделена!\n");
         return 1;
     }
-    nums[0] = 1;
-    nums[1] = 2;
-    nums[2] = 3;
-    nums[3] = 4;
-    nums[4] = 5;
+
+    for (size_t i = 0; i < size; i++)
+    {
+        nums[i] = (int)i;
+    }
 
     NUMS(nums, size);
     cycle(nums, size, target);
